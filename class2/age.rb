@@ -16,6 +16,7 @@ def is_a_teenager(age)
   end
 end
 
+# Tells us if the person is 18 and over
 def is_an_adult(age)
   if age >= 18
     true
