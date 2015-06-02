@@ -1,33 +1,5 @@
-# This method adds two numbers and returns the
-# sum of the two numbers
-def add(x,y)
-  # TODO: Complete implementation
- 	x + y
-end
-
-# This method calculates the difference of two numbers
-# and returns the difference of the two numbers
-def minus(x,y)
-  
- 	x - y
-
-end
-
-# This method calculates the product of two numbers
-# and returns the product of the two numbers
-def multiply(x,y)
-  
-  x * y
-
-end
-
-# This method calculates the division of two numbers
-# and returns the division of the two numbers
-def divide(x,y)
-
-    x / y if y!= 0
-
-end
+#Need to tell ruby where to load from ie including the path (unless it's in the same directory)
+require './simple_math'
 
 puts 'Welcome to our simple calculator'
 puts 'Value of x: '
@@ -36,8 +8,8 @@ first_value = gets.chomp.to_i
 puts 'Value of y: '
 second_value = gets.chomp.to_i
 
-# TODO: Finish this code below
-puts "Sum of x and y is #{add(first_value,second_value)}"
-puts "Difference of x and y is #{minus(first_value,second_value)}"
-puts "Product of x and y is #{multiply(first_value,second_value)}"
-puts "Division of x by y is #{divide(first_value,second_value)}"
+
+puts "Sum of x and y is #{SimpleMath.add(first_value,second_value)}"
+puts "Difference of x and y is #{SimpleMath.minus(first_value,second_value)}"
+puts "Product of x and y is #{SimpleMath.multiply(first_value,second_value)}"
+puts "Division of x by y is #{SimpleMath.divide(first_value,second_value)}"
