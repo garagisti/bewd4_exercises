@@ -27,5 +27,10 @@ end
 
 puts 'How old are you?'
 years = get_user_age
-puts "Is an adult result: #{is_an_adult(years)}"
-puts "Is a teenager result: #{is_a_teenager(years)}"
+if is_an_adult(years)
+  puts 'Great, you are old enough'
+elsif is_a_teenager(years)
+  puts 'Please get your parents permission'
+else
+  puts 'Sorry, you are too young'
+end
