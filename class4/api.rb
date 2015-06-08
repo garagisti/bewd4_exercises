@@ -19,10 +19,10 @@ end
 # i.e. { name: 'Alfred Pennyworth', gender: :male } becomes
 # { first_name: 'Alfred', last_name: 'Pennyworth', gender: :male }
 mod_characters = characters.map do |character|
-  name = character['name']
-  gender = character['gender']
-  first_name = character['name'].split.first
-  last_name = character['name'].split.last
+  name        = character['name']
+  gender      = character['gender']
+  first_name  = name.split.first
+  last_name   = name.split.last
   { first_name: first_name, last_name: last_name, gender: gender.to_sym }
 end
 

@@ -21,8 +21,8 @@ end
 mod_characters = characters.map do |character|
   name = character[:name]
   gender = character[:gender]
-  first_name = character[:name].split.first
-  last_name = character[:name].split.last
+  first_name = name.split.first
+  last_name = name.split.last
   { first_name: first_name, last_name: last_name, gender: gender }
 end
 
