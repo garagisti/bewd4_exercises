@@ -8,3 +8,27 @@
 # Add the following attributes to our 2 people
 # person 1 -> no_of_dependents: 1, occupation: 'Hero', annual_income: 25000.00
 # person 2 -> no_of_dependents: 0, occupation: 'Hero', annual_income: nil
+
+# Demo 5
+# Add a dynamic value which calculates the age of either person
+
+# Exercise 6
+# Add a dynamic value which categorises the person as tier 1, 2 or 3 as per the following rules
+# < 100k annual income -> Tier 1
+# >= 100k and < 200k -> Tier 2
+# >= 200k -> Tier 3
+
+# Demo 7
+# Convert Person into a class
+
+# Demo 9
+# Create objects person 1 and 2
+
+# Exercise 11
+# Create a relationship between person and address
+
+# Demo 12
+# Implement the age method in Person as a class method
+
+# Exercise 13
+# Implement the tier method in Person as a class method
