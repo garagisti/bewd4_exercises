@@ -1,40 +1,36 @@
-# Exercise 1
-# Model 2 people using a hash, these two people
-# have the following attributes
-# person1 -> name: 'Selina Kyle', gender: 'Female', dob: '03-08-1981'
-# person2 -> name: 'Harper Row', gender: 'Male', dob: '21-03-1983'
+require 'date'
 
-# Exercise 2
-# Add the following attributes to our 2 people
-# person 1 -> no_of_dependents: 1, occupation: 'Hero', annual_income: 25000.00
-# person 2 -> no_of_dependents: 0, occupation: 'Hero', annual_income: nil
+# A person is an applicant or tenant of our realty app.
+class Person
+  attr_accessor :name, :gender, :dob, :no_of_dependents,
+                :annual_income, :occupation
+  attr_accessor :addresses
 
-# Demo 5
-# Add a dynamic value which calculates the age of either person
+  # A person should specify a name, gender and dob to be valid
+  # This is also known as the invariant laws of the class
+  def initialize(name, gender, date_of_birth)
+    @addresses = []
+    @name = name
+    @gender = gender
+    @dob = date_of_birth
+  end
 
-# Exercise 6
-# Add a dynamic value which categorises the person as tier 1, 2 or 3 as per the following rules
-# < 100k annual income -> Tier 1
-# >= 100k and < 200k -> Tier 2
-# >= 200k -> Tier 3
+  # A dynamic attribute which calulates the age of the person.
+  # This is a simple calculation with some known issues
+  def age
+    dob_dt = Date.parse(@dob)
+    today = DateTime.now
+    (today.mjd - dob_dt.mjd) / 365
+  end
 
-# Demo 7
-# Convert Person into a class
-
-# Demo 9
-# Create objects person 1 and 2
-
-# Demo 11
-# Create a relationship between person and address
-
-# Demo 12
-# Implement the age method in Person as a class method
-
-# Exercise 13
-# Implement the tier method in Person as a class method
-
-# Demo 14
-# Implement the age method as an instance method
-
-# Exercise 15
-# Implement the tier method as an instance method
+  # Tells us which income bracket in which a person is
+  def income_tier
+    if @annual_income.nil? || @annual_income < 100000
+      'Tier 1'
+    elsif @annual_income >= 100000 && @annual_income < 200000
+      'Tier 2'
+    else
+      'Tier 3'
+    end
+  end
+end
