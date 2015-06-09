@@ -24,7 +24,7 @@
 # Demo 9
 # Create objects person 1 and 2
 
-# Exercise 11
+# Demo 11
 # Create a relationship between person and address
 
 # Demo 12
@@ -32,3 +32,9 @@
 
 # Exercise 13
 # Implement the tier method in Person as a class method
+
+# Demo 14
+# Implement the age method as an instance method
+
+# Exercise 15
+# Implement the tier method as an instance method
