@@ -6,8 +6,8 @@ require 'byebug'
 # The response is a string.
 data = RestClient.get("http://bewd4-rails-class4.herokuapp.com/api/characters")
 
-# This returns an array of hashes. 
-characters = JSON.parse(data) 
+# This returns an array of hashes.
+characters = JSON.parse(data)
 
 # Exercise 1
 # Print out all the names of the female characters
@@ -15,13 +15,13 @@ characters = JSON.parse(data)
 characters.each do |character|
 	# if character['gender'] == 'female'
 	# 	puts character['name']
-	# end	
+	# end
 
 	puts character['name'] if character['gender'] == 'female'
 end
 
 
-byebug
+bye
 # Exercise 2
 # Modify the original list of participants by separating the characters name
 # into two fields so for example name: would be replaced by first_name: and last_name:
