@@ -20,7 +20,6 @@ end
 # into two fields so for example name: would be replaced by first_name: and last_name:
 # i.e. { name: 'Alfred Pennyworth', gender: :male } becomes
 # { first_name: 'Alfred', last_name: 'Pennyworth', gender: :male }
-<<<<<<< HEAD
 
 mod_characters = characters.map do |character|
 	name = character['name']
