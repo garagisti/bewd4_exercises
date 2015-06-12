@@ -1,10 +1,11 @@
+
 # Standard Fizz Buzz Approach
 
 # (1..100).each { |x|
 
-# 	if x%3 == 0 && x%5 == 0 
+# 	if x%3 == 0 && x%5 == 0
 # 	puts 'fizz-buzz'
-# 	elsif x%3 == 0 
+# 	elsif x%3 == 0
 # 		puts 'buzz'
 # 	elsif x%5 == 0
 # 		puts 'fizz'
@@ -26,3 +27,4 @@
 		puts "Buzz: #{x}" if x % 5 == 0
 	end
 }
+

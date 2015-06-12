@@ -2,7 +2,6 @@ require 'json'
 require 'rest-client'
 require 'byebug'
 
-
 # The response is a string.
 data = RestClient.get("http://bewd4-rails-class4.herokuapp.com/api/characters")
 
@@ -13,20 +12,15 @@ characters = JSON.parse(data)
 # Print out all the names of the female characters
 
 characters.each do |character|
-	# if character['gender'] == 'female'
-	# 	puts character['name']
-	# end
-
 	puts character['name'] if character['gender'] == 'female'
 end
 
-
-bye
 # Exercise 2
 # Modify the original list of participants by separating the characters name
 # into two fields so for example name: would be replaced by first_name: and last_name:
 # i.e. { name: 'Alfred Pennyworth', gender: :male } becomes
 # { first_name: 'Alfred', last_name: 'Pennyworth', gender: :male }
+<<<<<<< HEAD
 
 mod_characters = characters.map do |character|
 	name = character['name']
@@ -66,4 +60,3 @@ male_participant_count = mod_characters.reduce(0) do |count, character|
 end
 
 puts male_participant_count
-
